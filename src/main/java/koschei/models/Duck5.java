@@ -7,9 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class Duck5 {
 
+    private Egg6 egg;
+
     @Autowired
     @Qualifier("getEgg")
-    private Egg6 egg;
+    public void setEgg(Egg6 egg) {
+        this.egg = egg;
+    }
 
     @Override
     public String toString() {
